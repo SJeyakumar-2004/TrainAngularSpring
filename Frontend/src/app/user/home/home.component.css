@@ -1,0 +1,112 @@
+/* img{ */
+    /* background-image: url('save1.png'); */
+    /* background-image: url('save4.jpeg'); */
+    
+    /* margin-top: 1px;
+    width: 85px;
+    height: 85px;
+}
+.i
+{
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+}
+body{
+    background-image: url('train.png');
+    background-size: cover;
+   
+    margin: 0;
+    height: 130vh;
+    
+}
+.h
+{
+    margin-left: 700px;
+    margin-bottom: 700px;
+    font-size: 70px;
+    color: rgb(5, 5, 71);
+}
+.hi
+{
+   margin-left: 880px;
+    margin-bottom: 600px;
+    font-size: 20px;
+    color: rgb(5, 5, 71);
+}
+.in
+{
+    margin-top: -600px;
+    margin-left: 30px;
+    width:600px;
+    background-color: white;
+    border-color: black;
+}
+.k
+{
+    width: 273px;
+    height: 35px;
+    margin-right: 30px;
+    background-color: rgb(2, 2, 52);
+    color:white;
+    text-align: center;
+}
+.kk
+{
+    width:273px;
+   height: 35px;
+    background-color: rgb(2, 2, 52);
+    color:white;
+    text-align: center;
+}
+
+.l
+{
+    text-align: center;
+}
+#fr
+{
+    color: rgb(11, 11, 220);
+}
+#hv:hover
+{
+    background-color: rgb(10, 249, 249);
+} */
+
+
+
+
+
+
+
+
+img{ 
+    /* background-image: url('save1.png');
+    background-image: url('save4.jpeg');  */
+    
+     margin-top: 1px;
+    width: 75px;
+    height: 75px;
+}
+#i
+{
+    color:coral;
+    background-color: aquamarine;
+    margin-top: 20px;
+    width: 70px;
+    height: 40px;
+}
+#co
+{
+    background-color: rgb(3, 3, 83);
+}
+
+#moon:hover
+{
+    background-color: rgb(216, 166, 71);
+    color: aqua;
+}
+#mom:hover
+{
+    color: rgb(216, 166, 71);
+}

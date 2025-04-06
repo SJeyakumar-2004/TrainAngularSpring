@@ -1,0 +1,84 @@
+
+
+<!-- <body > -->
+    
+
+    <body >
+    
+        <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">TrainNo :</label>
+        <div class="col-6">
+        <input type="text" class="form-control" name="trainNo" [(ngModel)]="form.trainHeader.trainNo">
+        </div>
+    </div><br>
+
+<div >
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">TrainName :</label>
+    <div class="col-6">
+    <select class="form-select" name="trainName" [(ngModel)]="form.trainHeader.trainName" >
+        <option value="Nellai Express">Nellai Express</option>
+        <option value="Pothigai">Pothigai</option>
+        <option value="Nagercoil">Nagercoil</option>
+        <option value="Kollam">Kollam</option>
+    </select>
+    <!-- <input type="text" class="form-control" name="trainName" [(ngModel)]="form.trainHeader.trainName" #trainName="ngModel" required maxlength="15" pattern="^[a-z A-Z]+$"> -->
+    </div>
+</div><br>
+
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">Date :</label>
+    <div class="col-6">
+    <input type="date" class="form-control" name="date" [(ngModel)]="form.trainHeader.date" >
+    </div>
+</div><br>
+
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">Source :</label>
+    <div class="col-6">
+    <input type="text" class="form-control" name="source" [(ngModel)]="form.trainHeader.source" >
+    
+    </div>
+</div><br>
+
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">Destinaction :</label>
+   
+    <div class="col-6">
+    <input type="text" class="form-control" name="destinaction" [(ngModel)]="form.trainHeader.destinaction" >
+    
+    </div>
+</div><br>
+
+
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">Amount :</label>
+    <div class="col-6">
+    <input type="text" class="form-control" name="amount" [(ngModel)]="form.trainHeader.amount" > 
+    </div>
+</div><br>
+
+<div class="row">
+    <label for="" class="col-3"></label>
+    <div class="col-2">
+<button class="btn btn-warning" (click)="update()" routerLink="/home">Submit</button>
+</div>
+</div>
+
+</div>
+</body>
+
+
+
+
+
+
+
+
+ 

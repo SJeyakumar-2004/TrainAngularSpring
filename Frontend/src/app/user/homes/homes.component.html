@@ -1,0 +1,47 @@
+<body>
+    <div class="row" id="co">
+
+        <label class="col-1"></label>
+        <div class="col-3">
+            <button class="btn btn-success" id="i" routerLink="/home">Back</button>
+        </div>
+        <label class="col-5"></label>
+        <div class="col-2">
+            <img src="save4.jpeg" >
+        </div>
+    </div>
+    
+    <div class="container" class="jk">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th >id</th>
+                    <th >TrainNo</th>
+                    <th >Name</th>
+                    <th >Age</th>
+                    <th >Gender</th>
+                    <th>AdharNo</th>
+                    <th >PhoneNo</th>
+                    <th >Amount</th>
+                    <th><i class="fa-solid fa-train"></i></th>
+                    <th ></th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let all of pro">
+                <tr *ngFor="let person of all.bookingDetails">  
+                    <td >{{person.id}}</td>
+                    <td >{{all.trainHeader.trainNo}}</td>
+                    <td>{{person.name}}</td>
+                    <td >{{person.age}}</td>
+                    <td >{{person.gender}}</td>
+                    <td >{{person.adharNo}}</td>
+                    <td >{{person.phoneNo}}</td>
+                    <td >{{person.amount}}</td>    
+                    <td><i class="fa-solid fa-user-pen" [routerLink]="['/edit/',person.id]"></i></td>
+                    <td><i class="fa-solid fa-trash" (click)="delete(person.id)"></i></td>              
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    </body>

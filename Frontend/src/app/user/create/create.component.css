@@ -1,0 +1,22 @@
+img{ 
+    /* background-image: url('save1.png');
+    background-image: url('save4.jpeg');  */
+    
+     margin-top: 1px;
+    width: 75px;
+    height: 75px;
+}
+#i
+{
+    color:coral;
+    background-color: aquamarine;
+    margin-top: 20px;
+    width: 70px;
+    height: 40px;
+}
+#co
+{
+    margin-left: 0px;
+    width: 1139px;
+    background-color: rgb(3, 3, 83);
+}

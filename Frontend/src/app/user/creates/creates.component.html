@@ -1,0 +1,148 @@
+<div class="row" id="co">
+  <label class="col-1"></label>
+  <div class="col-3">
+      <button class="btn btn-success" id="i"  (click)="navigateBack()">Back</button>
+  </div>
+  <label class="col-5"></label>
+  <div class="col-2">
+      <img src="save4.jpeg">
+  </div>
+</div><br>
+<body>
+
+    <!-- Train Header Section -->
+    <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">TrainNo :</label>
+        <div class="col-6">
+            <input type="text" class="form-control" name="trainNo" [(ngModel)]="form.trainHeader.trainNo" (ngModelChange)="onTrainNoChange()">
+        </div>
+    </div><br>
+
+    <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">TrainName :</label>
+        <div class="col-6">
+            <input type="text" class="form-control" name="trainName" [(ngModel)]="form.trainHeader.trainName" disabled required>
+        </div>
+    </div><br>
+
+    <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">Date :</label>
+        <div class="col-6">
+            <input type="text" class="form-control" name="date" [(ngModel)]="form.trainHeader.date" disabled required>
+        </div>
+    </div><br>
+
+    <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">Source :</label>
+        <div class="col-6">
+            <input type="text" class="form-control" name="source" [(ngModel)]="form.trainHeader.source" disabled required>
+        </div>
+    </div><br>
+
+    <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">Destinaction :</label>
+        <div class="col-6">
+            <input type="text" class="form-control" name="destinaction" [(ngModel)]="form.trainHeader.destinaction" disabled required> 
+        </div>
+    </div><br>
+
+    <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">Amount :</label>
+        <div class="col-6">
+            <input type="text" class="form-control" name="amount" [(ngModel)]="form.trainHeader.amount" disabled required> 
+        </div>
+    </div><br>
+
+  
+
+
+
+<!-- <form #res="ngForm"> -->
+
+<div>
+    <nav class="navbar navbar-dark bg-dark" style="height: 10px;"></nav>
+  </div><br>
+  
+    <div *ngFor="let person of form.bookingDetails">
+      <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">TrainNo :</label>
+        <div class="col-6">
+          <input type="text" class="form-control" name="trainNo" [(ngModel)]="person.trainNo" disabled required>
+          
+        </div>
+      </div><br>
+  
+      <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">Name :</label>
+        <div class="col-6">
+          <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="person.name" required>
+          <span *ngIf="(name.invalid && name.touched)" class="text-danger">Name Required</span>
+        </div>
+      </div><br>
+  
+      <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">Age :</label>
+        <div class="col-6">
+          <input type="text" class="form-control" name="age" #age="ngModel" [(ngModel)]="person.age" required pattern="^[0-9]+$">
+        </div>
+      </div><br>
+  
+      <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">Gender :</label>
+        <div class="col-2">
+          <input type="radio" name="gender" [(ngModel)]="person.gender" value="Male"> Male &nbsp;
+          <input type="radio" name="gender" [(ngModel)]="person.gender" value="Female"> Female
+          <!-- <input type="radio" class="form-control" name="gender" [(ngModel)]="person.gender"> -->
+          <!-- <input type="radio" class="form-control" name="gender" [(ngModel)]="person.gender"> -->
+        </div>  
+      </div><br>
+  
+      <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">AdharNo :</label>
+        <div class="col-6">
+          <input type="text" class="form-control" name="adharNo" #adharNo="ngModel" [(ngModel)]="person.adharNo" required pattern="^[0-9]+$">
+        </div>
+      </div><br>
+  
+      <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">PhoneNo :</label>
+        <div class="col-6">
+          <input type="text" class="form-control" name="phoneNo" #phoneNo="ngModel" [(ngModel)]="person.phoneNo" required pattern="^[0-9]+$">
+        </div>
+      </div><br>
+  
+      <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">Amount :</label>
+        <div class="col-6">
+          <input type="text" class="form-control" name="amount" [(ngModel)]="person.amount" disabled required>
+        </div><br>
+      </div><hr>
+    </div><br>
+    
+  
+   
+    <div class="row">
+      <label for="" class="col-3"></label>
+      <div class="col-2">
+        <button class="btn btn-info" (click)="addBooking()">Add++</button>
+      </div>
+      <div class="col-2">
+        <button class="btn btn-warning" (click)="methods()" (click)="navigateBack()" [disabled]="!isFormValid()">Book</button>
+      </div>
+    </div><br>
+
+  
+  </body>

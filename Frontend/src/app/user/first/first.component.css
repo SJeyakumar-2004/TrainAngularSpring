@@ -1,0 +1,56 @@
+img{ 
+  /* background-image: url('save1.png');
+  background-image: url('save4.jpeg');  */
+  
+   margin-top: 1px;
+  width: 75px;
+  height: 75px;
+}
+#i
+{
+  color:coral;
+  background-color: aquamarine;
+  margin-top: 20px;
+  width: 70px;
+  height: 40px;
+}
+#co
+{
+  background-color: white
+}
+
+body {
+    background-image: url('train.png');
+    background-size: cover;
+   
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content {
+    color: rgb(4, 4, 84);
+    text-align: center;
+    padding: 30px;
+    z-index: 1;
+    font-family: Arial;
+    border:2px solid white;
+    backdrop-filter: blur(1px);
+  }
+  #j:hover{
+    background-color: blueviolet;
+  }
+
+#moon
+{
+  margin-bottom: 500px;
+  margin-left: 400px;
+}
+#nila
+{
+  margin-bottom: 300px;
+  margin-right: 100px;
+}
+  

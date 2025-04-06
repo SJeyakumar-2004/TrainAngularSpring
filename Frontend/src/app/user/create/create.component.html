@@ -1,0 +1,111 @@
+<div class="row" id="co">
+    <label class="col-1"></label>
+    <div class="col-3">
+        <button class="btn btn-success" id="i" (click)="navigateBack()">Back</button>
+    </div>
+    <label class="col-5"></label>
+    <div class="col-2">
+        <img src="save4.jpeg" >
+    </div>
+</div><br>
+
+<!-- <body > -->
+    <!-- <div class="row">
+        <label for="" class="col-2"></label>
+        <label for="" class="col-2">TrainNo :</label>
+        <div class="col-6">
+        <input type="text" class="form-control" name="trainNo" [(ngModel)]="form.trainHeader.trainNo">
+        </div>
+    </div><br> -->
+
+    <body >
+   <form #res="ngForm">
+
+    <div class="row">
+        <label for="" class="col-3"></label>
+        <div class="col-3">
+          <input type="checkbox" [(ngModel)]="isChecked" name="trainHeaderCheckbox" id="trainHeaderCheckbox"> Confirm Add Train
+        </div>
+      </div><br>
+
+<div *ngIf="isChecked">
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">TrainName :</label>
+    <div class="col-6">
+    <select class="form-select" name="trainName" [(ngModel)]="form.trainHeader.trainName" #trainName="ngModel" required maxlength="15" pattern="^[a-z A-Z]+$">
+        <option value="Nellai Express">Nellai Express</option>
+        <option value="Pothigai">Pothigai</option>
+        <option value="Nagercoil">Nagercoil</option>
+        <option value="Kollam">Kollam</option>
+    </select>
+    <!-- <input type="text" class="form-control" name="trainName" [(ngModel)]="form.trainHeader.trainName" #trainName="ngModel" required maxlength="15" pattern="^[a-z A-Z]+$"> -->
+    <span *ngIf="(res.submitted && trainName.invalid)||(trainName.invalid && trainName.touched)" style="color: red;">trainName Required</span>
+    <span *ngIf="trainName.errors?.['maxlength']" style="color:red">Minimum 15 letter</span>
+    <span *ngIf="trainName.errors?.['pattern']" style="color: red;">Only Character Allowed</span>
+    </div>
+</div><br>
+
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">Date :</label>
+    <div class="col-6">
+    <input type="date" class="form-control" name="date" [(ngModel)]="form.trainHeader.date" #date="ngModel" required>
+    <span *ngIf="(res.submitted && date.invalid)||(date.invalid && date.touched)" style="color: red;">Date Required</span>
+    </div>
+</div><br>
+
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">Source :</label>
+    <div class="col-6">
+    <input type="text" class="form-control" name="source" [(ngModel)]="form.trainHeader.source" #source="ngModel" required maxlength="15" pattern="^[a-z A-Z]+$">
+    <span *ngIf="(res.submitted && source.invalid)||(source.invalid && source.touched)" style="color:red">Source Required</span>
+    <span *ngIf="source.errors?.['maxlength']" style="color: red;">Maximum 15 Character</span>
+    <span *ngIf="source.errors?.['pattern']" style="color:red">Character Only Allowed</span>
+    </div>
+</div><br>
+
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">Destinaction :</label>
+   
+    <div class="col-6">
+    <input type="text" class="form-control" name="destinaction" [(ngModel)]="form.trainHeader.destinaction" #destinaction="ngModel" required maxlength="15" pattern="^[a-z A-z]+$">
+    <span *ngIf="(res.submitted && destinaction.invalid)||(destinaction.invalid && destinaction.touched)" style="color: red;">Destinaction Required</span> 
+    <span *ngIf="destinaction.errors?.['maxlength']" style="color: red;">Maximum 15 Character</span>
+    <span *ngIf="destinaction.errors?.['pattern']" style="color: red;">Character Only Allowed</span>
+    </div>
+</div><br>
+
+
+<div class="row">
+    <label for="" class="col-2"></label>
+    <label for="" class="col-2">Amount :</label>
+    <div class="col-6">
+    <input type="text" class="form-control" name="amount" [(ngModel)]="form.trainHeader.amount" #amount="ngModel" required maxlength="4" pattern="^[0-9]+$"> 
+    <span *ngIf="(res.submitted && amount.invalid)||(amount.invalid && amount.touched)" style="color: red;">Amount Required</span>
+    <span *ngIf="amount.errors?.['maxlength']" style="color: red;">Maximum 4 Number</span>
+    <span *ngIf="amount.errors?.['pattern']" style="color: red;">Number Only Allowed</span>
+    </div>
+</div><br>
+
+<div class="row">
+    <label for="" class="col-3"></label>
+    <div class="col-2">
+<button class="btn btn-warning" (click)="method(res)" (click)="navigateBack()" [disabled]="res.invalid">Submit</button>
+</div>
+</div>
+
+</div>
+</form> 
+</body>
+
+
+
+
+
+
+
+
+ 

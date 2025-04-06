@@ -1,0 +1,203 @@
+<body>
+    <div class="row" id="co">
+
+        <label class="col-1"></label>
+        <div class="col-3">
+            <button class="btn btn-success" id="i" routerLink="/first">Back</button>
+        </div>
+        <label class="col-5"></label>
+        <div class="col-2">
+            <img src="save4.jpeg" >
+        </div>
+       
+    </div>
+    
+    <div class="container" class="jk">
+        <table class="table" *ngIf="pro">
+            <thead>
+                <tr>
+                    <th >TrainNo</th>
+                    <th >TrainName</th>
+                    <th >Date</th>
+                    <th >Source</th>
+                    <th >Destinaction</th>
+                    <th >Amount</th>
+                    <th></th>
+                    <!-- <th><i class="fa-solid fa-train" routerLink="/create" id="mom"></i></th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let all of pro">
+                    <td >{{all.trainHeader.trainNo}}</td>
+                    <td >{{all.trainHeader.trainName}}</td>
+                    <td >{{all.trainHeader.date | date}}</td>
+                    <td >{{all.trainHeader.source}}</td>
+                    <td >{{all.trainHeader.destinaction}}</td>
+                    <td >{{all.trainHeader.amount}}</td>
+                    <td><i class="fa-solid fa-user-pen" [routerLink]="['/edittrain/',all.trainHeader.trainNo]"></i></td>
+                    <td><i class="fa-solid fa-trash"></i></td> 
+                    <!-- <td><button  class="btn btn-light" [routerLink]="['/creates']" id="moon">Booking</button></td>
+                    <td><a href="" class="btn btn-light" routerLink="/homes" id="moon">BookingDetail</a></td>
+                 -->
+                </tr><br>  
+            </tbody>
+        </table>
+         
+        <div class="row" >
+            <label for="" class="col-3"></label>
+            <div class="col-2">
+                <button  class="btn btn-light"  id="moon" (click)="po()" >Booking</button>
+            </div>
+            <div class="col-2">
+                <h2><i class="fa-solid fa-train"  id="mom"  (click)="popup()"></i></h2>
+            </div>
+            <div class="col-2">
+                <a href="" class="btn btn-light" routerLink="/homes" id="moon">BookingDetail</a>
+            </div>
+            </div>
+        
+    </div>
+    </body>
+
+
+
+                          <!-- INDIAN RAILWAY -->
+       
+     <!-- <div class="row" >
+
+        <label class="col-1"></label>
+        <div class="col-3">
+            <img src="save1.png" class="i">
+        </div>
+        <label class="col-6"></label>
+        <div class="col-2">
+            <img src="save4.jpeg" >
+        </div>
+    </div>
+<hr>
+    <body>
+        <div class="row">
+        <label for="" class="col-8"></label>
+        <h1  class="col-4">INDIAN RAILWAY</h1>
+        <h6 class="hi">Safety | Security | Punctuality</h6>  
+        </div>
+
+        
+        <form action="">
+            <div class="row">
+            <div class="col-6" class="in">
+                <div>
+                <label for="" class="col-3" class="k">PNRSTATUS</label>
+                <label for="" class="col-3" class="kk">CHARTS/VACANCY</label><br><br>
+                <h3 class="l">BOOK TICKET</h3><br>
+            </div>
+
+                <div class="row">
+                    
+                <label for="" class="col-2">TrainName:</label>
+                <div  class="col-4">
+                <select class="form-select" >
+                <input type="text" class="form-select" class="form-control">
+                <option value="">Nellai Express</option>
+                <option value="">Pothigai</option>
+                <option value="">NagerKovil</option>
+                <option value="">Kollam</option>
+            </select></div>
+
+            <label for="" class="col-2">Date :</label>
+            <div class="col-4">
+                <input type="date" class="form-control">
+            </div>
+        </div><br>
+
+         
+        <div class="row">
+            <label for="" class="col-2">From :</label>
+            <div class="col-4">
+                <input type="text" class="form-control">
+            </div>
+            
+            <label for="" class="col-2">To :</label>
+            <div class="col-4">
+                <input type="text" class="form-control">
+            </div>
+        </div><br>
+
+
+        <div class="row">
+            <label for="" class="col-2">Name :</label>
+            <div class="col-4">
+                <input type="text" class="form-control">
+            </div>
+            
+            <label for="" class="col-2">Age :</label>
+            <div class="col-4">
+                <input type="text" class="form-control">
+            </div>
+        </div><br>
+
+          
+
+        
+        <div class="row">
+            <label for="" class="col-2">Gender :</label>
+            <div  class="col-4">
+                <select class="form-select" >
+                <input type="text" class="form-select" class="form-control">
+                <option value="">Male</option>
+                <option value="">Female</option>
+            </select>
+        </div>
+            <label for="" class="col-2">AdharNo :</label>
+            <div class="col-4">
+                <input type="text" class="form-control">
+            </div>
+        </div><br>
+
+
+
+        <div class="row">
+            <label for="" class="col-2">PhoneNo :</label>
+            <div class="col-4">
+                <input type="text" class="form-control">
+            </div>
+            
+            <label for="" class="col-2">Amount :</label>
+            <div class="col-4">
+                <input type="text" class="form-control">
+            </div>
+        </div><br>
+
+
+        <div class="text-center">  
+        <button class="btn btn-warning" id="hv">Sumbit</button>
+    </div>
+       <hr>
+
+       <div class="row" id="fr">
+        <label class="col-2"></label>
+        <p class="col-8">Customer Care Number : 8838236029 | 9585996857!</p>
+       </div>
+
+
+       <div class="row">
+        <label for="" class="col-1"></label>
+        <div class="col-2">
+            
+        <button class="btn btn-warning" id="hv">TrainDetails</button>
+       </div>
+       <label for="" class="col-1"></label>
+       <label for="" class="col-4" id="fr">jeyakumar@gmail.com</label>
+       <div class="col-2">
+        <button class="btn btn-warning" id="hv">BookingDetails</button>
+       </div>
+       </div>
+       
+
+       </div>
+        </div>
+            
+    </form>
+        
+
+</body>  -->
